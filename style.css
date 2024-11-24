@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: 'Poppins', sans-serif;
+    --text-color: #ffffff;
+    --bg-color: #030B0D;
+    --primary-color: #065E7C;
+    --secondary-color: #4A808C;
+    --bg-scroll: #06181C;
+
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    
+}
+
+body * {
+    font-family: var(--ff-primary);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#app {
+    padding: 2rem;
+    max-width: 1120px;
+    margin: 0 auto;
+    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem;    
+}
+
+.search {
+    display: flex;
+    align-items: center;    
+}
+
+
+.search input {
+    height: 3.2rem;
+    border: 1px solid #06181C;
+    border-radius: .4rem 0 0 .4rem;
+    padding: 0 .8rem;
+    width: 46rem;
+    background: transparent;
+    color: var(--text-color);    
+}
+
+.search button {
+    background-color: var(--primary-color);
+    border-radius: 0 .4rem .4rem 0;
+    height: 3.2rem;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+    color: #ffffff;     
+    display: flex; 
+    gap: 1rem; 
+    align-items: center;
+}
+
+.search button:hover {
+    filter: brightness(1.1);
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;        
+}
+
+table * {
+    font-size: 1.6rem;
+    color: var(--text-color);
+       
+}
+
+.table-container {
+    border-radius: 0.8rem; 
+    border: 1px solid var(--secondary-color); 
+    overflow-y: auto; 
+    margin-top: 7.5rem;
+    max-width: 1120px;
+    max-height: 60rem;
+    scrollbar-width: thin; 
+    scrollbar-color: var(--bg-scroll) transparent; 
+}
+
+table th {
+    background: var(--primary-color);
+    text-align: left;
+    font-weight: normal;
+    padding: 1.5rem;
+    justify-content: space-between;
+    background-color: #06181C;  
+      
+}
+
+table th:first-child {
+    border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+    border-top-right-radius: .4rem;
+}
+
+table tr:nth-child(even) {     
+    background: #070c0e;
+    border: 1px solid var(--secondary-color);
+
+}
+
+table tr:nth-child(odd) {
+    background: #000000;
+}
+
+table td {
+    padding: 1.5rem;
+    text-align: left;
+    
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+td .remove {
+    background: none;
+    border: none;
+    color: rgb(209, 52, 52);
+    cursor: pointer;
+}
